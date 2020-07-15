@@ -19,4 +19,4 @@ void getInverse(Fraction *a, Fraction *inverse);
 int isZero(Fraction *a);
 int equalsFraction(Fraction *a, Fraction *b);
 
-#endif
+#endif //FRACTION_H
