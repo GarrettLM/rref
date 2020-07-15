@@ -1,3 +1,5 @@
+#include <stddef.h>
+#include "fraction.h"
 #include "vector.h"
 
 //multiplies the vector b by the scalar and adds the resulting vector to a

@@ -1,4 +1,8 @@
-#include "matrix.c"
+#include <stdio.h>
+#include <stdlib.h>
+#include "fraction.h"
+#include "vector.h"
+#include "matrix.h"
 
 int main(int argc, char *argv[]) {
 

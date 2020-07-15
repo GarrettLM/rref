@@ -1,4 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "fraction.h"
 #include "matrix.h"
+#include "vector.h"
 
 Fraction** initializeMatrix(Fraction ***matrix, size_t numColumns, size_t numRows) {
 	*matrix = (Fraction**) malloc(numRows * sizeof(Fraction*));
