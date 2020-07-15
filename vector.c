@@ -28,7 +28,7 @@ void subVector(Fraction a[], Fraction b[], size_t size, Fraction *scalar) {
 
 //multiplies each element in the vector a by the scalar
 void multiplyVector(Fraction a[], size_t size, Fraction *scalar) {
-	for (int i = 0; i < size; i++) multiplyFraction(&a[i], scalar);
+	for (size_t i = 0; i < size; i++) multiplyFraction(&a[i], scalar);
 }
 
 //returns 1 if all the fractions in a vector are equal to 0
