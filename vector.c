@@ -33,6 +33,10 @@ void multiplyVector(Fraction a[], size_t size, Fraction *scalar) {
 	for (size_t i = 0; i < size; i++) multiplyFraction(&a[i], scalar);
 }
 
+void swapVectors(Fraction vectorA[], Fraction vectorB[], size_t size) {
+	for (size_t i = 0; i < size; i++) swapFractions(&vectorA[i], &vectorB[i]);
+}
+
 //returns 1 if all the fractions in a vector are equal to 0
 int isZeroVector(Fraction a[], size_t size) {
 	for (int i = 0; i < size; i++) if (!isZero(&a[i])) return 0;

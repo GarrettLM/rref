@@ -8,6 +8,7 @@ void addVector(Fraction a[], Fraction b[], size_t size, Fraction *scalar);
 void subVector(Fraction a[], Fraction b[], size_t size, Fraction *scalar);
 //multiplies each element in the vector a by the scalar
 void multiplyVector(Fraction a[], size_t size, Fraction *scalar);
+void swapVectors(Fraction vectorA[], Fraction vectorB[], size_t size);
 //returns 1 if all the fractions in a vector are equal to 0
 int isZeroVector(Fraction a[], size_t size);
 

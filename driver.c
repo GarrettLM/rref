@@ -22,9 +22,9 @@ int main(int argc, char *argv[]) {
 	printf("Getting dimensions of the matrix from the file\n");
 	fscanf(infile, "%ld,%ld", &numColumns, &numRows);
 	printf("Dimension from the matrix are: %ld,%ld\n", numColumns, numRows);
-	Fraction ***matrix;
+	Fraction **matrix;
 	printf("Initializing the matrix\n");
-	if (initializeMatrix(matrix, numColumns, numRows) == NULL) {
+	if (initializeMatrix(&matrix, numColumns, numRows) == NULL) {
 		printf("Error: Failed to initialize memory!\n");
 		exit(1);
 	}
@@ -32,9 +32,15 @@ int main(int argc, char *argv[]) {
 	parseMatrix(matrix, numColumns, numRows, infile);
 	printf("Matrix parsed\nClosing file\n");
 	fclose(infile);
-	printMatrix(matrix, numColumns, numRows, infile);
+	printf("Original matrix:\n");
+	printMatrix(matrix, numColumns, numRows);
 	printf("Performing rref\n");
 	rref(matrix, numColumns, numRows);
 	printf("rref performed\n");
-	printMatrix(matrix, numColumns, numRows, infile);
+	printMatrix(matrix, numColumns, numRows);
+	if (argc < 3) exit(0);
+	FILE *outfile = fopen(argv[2], "w");
+	fprintMatrix(matrix, numColumns, numRows, outfile);
+	fclose(outfile);
+	deallocateMatrix(&matrix);
 }
